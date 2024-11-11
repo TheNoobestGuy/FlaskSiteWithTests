@@ -106,6 +106,7 @@ body  {
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    overflow: auto;
 }
 
 #favoriteTitle {
@@ -121,10 +122,8 @@ body  {
     display: inline-block;
     width: 50%;
     height: 95%;
-    text-align: left;
     overflow: auto;
     margin-left: 30px;
-    text-align: center;
 }
 
 .postBox {
@@ -136,20 +135,37 @@ body  {
 }
 
 #recipesTitle {
-    display: block;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #fff;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .favoriteList {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #fff;
-    margin-top: 30px;
+    margin-left: 20px;
     list-style-type: disc;
+    width: 50%;
+    justify-self: center;
+}
+
+.favoriteList li {
+    width: 100%;
+}
+
+.favoriteList li a {
+    width: 100%;
+    word-wrap: break-word;
+    display: block;
     text-align: left;
-    margin-left: 100px;
 }
 
 #favoriteUL li {

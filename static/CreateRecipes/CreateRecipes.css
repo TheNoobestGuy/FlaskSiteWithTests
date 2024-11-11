@@ -95,8 +95,8 @@ body  {
 /* Recipe menu */
 .recipeMenu {
     display: block;
-    margin-top: 50px;
-    margin-left: 15px;
+    margin-top: 30px;
+    margin-left: 93px;
 }
 
 .recipeMenu ul {
@@ -107,23 +107,24 @@ body  {
 }
 
 .recipeMenu ul li {
-    margin-top: 25px;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    padding: 25px 0px;
+    background-color: #232424;
+    margin-right: 20px;
+    border: #232424;
+    border-radius: 10px;
 }
 
 .recipeMenu ul li a{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-    text-align: center;
-    color: #fff;
-    padding: 25px 80px;
-    background-color: #232424;
-    margin-right: 20px;
-    border: #232424;
-    border-radius: 10px;
     user-select: none;
+    height: 100%;
 }
 
-.recipeMenu ul li a:hover{
+.recipeMenu ul li:hover{
     background-color: #555;
     cursor: pointer;
 }
@@ -134,7 +135,7 @@ body  {
     justify-content: center;
     margin-right: 10px;
     margin-left: 17px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .editableBlock {
@@ -163,36 +164,42 @@ body  {
     height: 60px;
     resize: none;
     font-size: 20px;
-    margin-left: 100px;
 }
 
 /* Ingredients */
 .spreadsheet {
     margin-top: 70px;
-    text-align: right;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .spreadsheet li {
-    position: relative;
+    display: flex;
     list-style: none;
     margin-top: 40px;
-    height: 80px;
-    width: 100px;
-    left: 30%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 .spreadsheet li label {
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     color: #fff;
-    top: 25%;
-    right: 20%;
-    width: auto;
+    top: 0;
 }
+
+.spreadsheet li textarea {
+    margin-left: 20px;
+}
+
 
 /* Finish functions */
 .nameOfRecipe {
+    display: flex;
+    flex-direction: column;
     background-color: #232424;
     border: #232424;
     border-radius: 10px;
@@ -200,6 +207,7 @@ body  {
     height: 100px;
     text-align: center;
     justify-content: center;
+    align-items: center;
     position: relative;
     bottom: 30px;
     left: 15px;
@@ -207,15 +215,14 @@ body  {
 }
 
 .nameOfRecipe label {
-    display: block;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     color: #fff;
-    margin-top: 10px;
 }
 
 .nameOfRecipe input {
-    display: relative;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 2.5%;
     height: 30px;
