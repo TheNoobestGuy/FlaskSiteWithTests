@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    display: flex;
+    height: 100vh;
+    background-image: url('https://c1.wallpaperflare.com/path/990/807/655/table-wood-fresh-organic-17d4c206ef194ab1a44877da494480b8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Main menu */
+.wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.main_menu {
+    width: 280px;
+    height: 100vh;
+    list-style: none;
+    list-style-type: none;
+    background-color: #232424;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.logged {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#menuTitle {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 18.5px 40px;
+    margin-top: 80px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.menu_button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18.5px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    user-select: none;
+}
+
+.menu_button:hover {
+    background-color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu_button_selected {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18.5px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    background-color: #555;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+/* Recipe menu */
+.recipeMenu {
+    display: block;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.recipeMenu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+}
+
+.recipeMenu ul li {
+    margin-top: 25px;
+}
+
+.recipeMenu ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    padding: 25px 80px;
+    background-color: #232424;
+    margin-right: 20px;
+    border: #232424;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.recipeMenu ul li a:hover{
+    background-color: #555;
+    cursor: pointer;
+}
+
+/* Space to create recipe */
+.editable {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 17px;
+    margin-top: 50px;
+}
+
+.editableBlock {
+    overflow: auto;
+    display: inline-block;
+    border: 10px solid #232424;
+    border-radius: 10px;
+    background-color: #232424;;
+    width: 783px;
+    height: 600px;
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.titleBox {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+    top: 5%;
+}
+
+.textBox {
+    position: block;
+    height: 60px;
+    resize: none;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+/* Ingredients */
+.spreadsheet {
+    margin-top: 70px;
+    text-align: right;
+}
+
+.spreadsheet li {
+    position: relative;
+    list-style: none;
+    margin-top: 40px;
+    height: 80px;
+    width: 100px;
+    left: 30%;
+}
+
+.spreadsheet li label {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #fff;
+    top: 25%;
+    right: 20%;
+    width: auto;
+}
+
+/* Finish functions */
+.nameOfRecipe {
+    background-color: #232424;
+    border: #232424;
+    border-radius: 10px;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+    left: 15px;
+    overflow: auto;
+}
+
+.nameOfRecipe label {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.nameOfRecipe input {
+    display: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2.5%;
+    height: 30px;
+    width: 200px;
+}
+
+.finishButton {
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.finishButton a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    padding: 20px 70px;
+    background-color: #232424;
+    margin-right: 20px;
+    border: #232424;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    height: 65px;
+    margin-left: 110px;
+}
+
+.finishButton a:hover {
+    background-color: #555;
+    cursor: pointer;
+    user-select: none;
+}

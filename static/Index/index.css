@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    display: flex;
+    height: 100vh;
+    background-image: url('https://c1.wallpaperflare.com/path/990/807/655/table-wood-fresh-organic-17d4c206ef194ab1a44877da494480b8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+p.error {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20px;
+    padding: 10px;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#title {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 80px;
+    top: 320px;
+}
+
+/* Main menu */
+.wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.main_menu {
+    width: 280px;
+    height: 100vh;
+    list-style: none;
+    list-style-type: none;
+    background-color: #232424;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.logged {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#menuTitle {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 18.5px 40px;
+    margin-top: 80px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.menu_button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18.5px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu_button:hover {
+    background-color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu_button_selected {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18.5px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    background-color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hid1 {
+    display: none;
+}
+
+.hid2 {
+    display: none;
+}
+
+/* window popup */
+#label {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    right: 27px;
+    bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.window-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+  
+.registrationClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    left: 10px;
+  }
+  
+.registrationClose:hover,
+.registrationClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.form_box {
+    text-align: right;
+    margin-right: 100px;
+}
+
+.box {
+    position: relative;
+    left: 20px;
+}
+
+.typeText {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20px;
+    margin: 20px;
+}
+
+/* Login popup */
+.loginClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    left: 10px;
+  }
+  
+.loginClose:hover,
+.loginClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

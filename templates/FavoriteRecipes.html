@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Maker</title>
+    <link rel="stylesheet" href="../static/FavoriteRecipes/FavoriteRecipes.css">
+    <script src="{{ url_for('static', filename='FavoriteRecipes/FavoriteRecipes.js') }}" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="main_menu" >
+                <a id="menuTitle"><strong>Menu</strong></a>
+                <li><a class="menu_button" onclick="goToHome()" id="home">Home</a></li>
+                <li><a class="menu_button" onclick="goToCreateRecipes()" id="createRecipe">Create recipes</a></li>
+                <li><a class="menu_button_selected">Favorite recipes</a></li>
+                <li></li>
+                <a id="menuTitle"><strong>Account</strong></a>
+                <a class="logged"></a>
+                <a class='menu_button' id="logOut"></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="favoriteBox">
+            <a id="favoriteTitle">Your favorite recipes list</a>
+            
+            <div id="favoriteBoxList">
+                <div class="favoriteBoxNames">
+                    <a id="recipesTitle">Recipes</a>
+                    <ul class="favoriteList" id="favoriteUL">
+                        <a id="favoriteULempty">There's no created recipes!</a>
+                    </ul>
+                </div>
+                <div class="postBox"></div>
+                <div id="favoriteBoxRecipeIngredients">
+                    <div class="favoriteBoxHid1">
+                        <a id="recipesTitle">Ingredients</a>
+                        <ul class="favoriteList" id="favoriteULIngredients">
+                        </ul>
+                    </div>
+                </div>
+                <div id="favoriteBoxRecipeSteps">
+                    <div class="favoriteBoxHid2">
+                        <a id="recipesTitle">Steps</a>
+                        <ul class="favoriteList" id="favoriteULSteps">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

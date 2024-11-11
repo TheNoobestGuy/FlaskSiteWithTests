@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Maker</title>
+    <link rel="stylesheet" href="../static/Index/index.css">
+    <script src="{{ url_for('static', filename='Index/index.js') }}" defer></script>
+</head>
+<body>
+    <!-- Registration Popout -->
+    <div id="registrationPopup" class="popup">
+        <div class="window-content">
+          <span class="registrationClose">&times;</span>
+          <a id="label">Register yourself!</a>
+          <form action="" class="box">
+            <div class="form_box">
+                <label for="username">Username:</label>
+                <input class="typeText" type="text" id="username" placeholder="Type desired username" required>
+                <p class="error"></p>
+            </div>
+            <div class="form_box">
+                <label for="email">E-mail:</label>
+                <input class="typeText" type="email" id="email" placeholder="Type your email" required>
+                <p class="error"></p>
+            </div>
+            <div class="form_box">
+                <label for="pass1">Password:</label>
+                <input class="typeText" type="password" id="pass1" placeholder="Type desired password" required>
+                <p class="error"></p>
+            </div>
+            <div class="form_box">
+                <label for="pass2">Repeat password: </label>
+                <input class="typeText" type="password" id="pass2" placeholder="Repeat your password" required>
+                <p class="error"></p>
+            </div>
+            <div class="buttons">
+                <input type="reset" value="Clear" class="reset typeText">
+                <input type="submit" value="Submit" class="sendReg typeText">
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <!-- Login Popout -->
+    <div id="loginPopup" class="popup">
+        <div class="window-content">
+          <span class="loginClose">&times;</span>
+          <a id="label">Log yourself!</a>
+          <form action="" class="box">
+            <div class="form_box">
+                <label for="email">E-mail:</label>
+                <input class="typeText" type="email" id="emailLogin" placeholder="Type your email" required>
+                <p class="error"></p>
+            </div>
+            <div class="form_box">
+                <label for="pass1">Password:</label>
+                <input class="typeText" type="password" id="passLogin" placeholder="Type your password" required>
+                <p class="error"></p>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Login" class="sendLog typeText">
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <!-- Page -->
+    <div class="wrapper">
+        <nav>
+            <ul class="main_menu" >
+                <a id="menuTitle"><strong>Menu</strong></a>
+                <li><a class="menu_button_selected" >Home</a></li>
+                <li><a class="menu_button" onclick="goToCreateRecipes()" id="createRecipe">Create recipes</a></li>
+                <li><a class="menu_button" onclick="goToFavoriteRecipes()" id="favoriteRecipe">Favorite recipes</a></li>
+                <li></li>
+                <a id="menuTitle"><strong>Account</strong></a>
+                <a class="logged"></a>
+                <li class="hid1"><a class="menu_button" id="loginButton">Login</a></li>
+                <li class="hid2"><a class="menu_button" id="registrationButton">Registration</a></li>
+                <a class='menu_button' id="logOut"></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <a id="title"><strong>Create your own recipes!</strong></a>
+    </div>
+</body>
+</html>

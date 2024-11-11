@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Maker</title>
+    <link rel="stylesheet" href="../static/CreateRecipes/CreateRecipes.css">
+    <script src="{{ url_for('static', filename='CreateRecipes/CreateRecipes.js') }}" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="main_menu" >
+                <a id="menuTitle"><strong>Menu</strong></a>
+                <li><a class="menu_button" onclick="goToHome()" id="home">Home</a></li>
+                <li><a class="menu_button_selected">Create recipes</a></li>
+                <li><a class="menu_button" onclick="goToFavoriteRecipes()" id="favoriteRecipe">Favorite recipes</a></li>
+                <li></li>
+                <a id="menuTitle"><strong>Account</strong></a>
+                <a class="logged"></a>
+                <a class='menu_button' id="logOut"></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <nav class="recipeMenu">
+            <ul>
+                <li><a id="addIngredient" onclick="addIngredientFunc()">Additional ingredient</a></li>
+                <li><a id="removeIngredient" onclick="removeIngredientFunc()">Remove ingredient</a></li>
+                <li><a id="addStep" onclick="addStepFunc()">Additional step</a></li>
+                <li><a id="removeStep" onclick="removeStepFunc()">Remove step</a></li>
+            </ul>
+        </nav>
+        <div class="editable">
+            <div class="editableBlock">
+                <a class="titleBox">Ingredients</a>
+                <ul class="spreadsheet" id="ingredientMenu">
+                    <li id="ingredientMenuID">
+                        <label>Ingredient 1:</label>
+                        <textarea id="textareaIngredients" class="textBox" placeholder="Input ingredient"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="editableBlock">
+                <a class="titleBox">Steps</a>
+                <ul class="spreadsheet" id="stepMenu">
+                    <li id="stepMenuID">
+                        <label>Step 1:</label>
+                        <textarea id="textareaSteps" class="textBox" placeholder="Input step"></textarea>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="finishButton">
+            <div class="nameOfRecipe">
+                <label>Name of recipe</label>
+                <input id="recipeName" placeholder="Input recipe name">
+            </div>
+            <a onclick="finishCreating()" id="finish">Finish</a>
+        </div>
+    </div>
+</body>
+</html>
