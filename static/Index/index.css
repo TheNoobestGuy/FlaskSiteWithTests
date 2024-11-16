@@ -27,17 +27,18 @@ p.error {
 
 /* Content */
 .content {
+    display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 #title {
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     font-size: 80px;
-    top: 320px;
 }
 
 /* Main menu */
@@ -48,15 +49,20 @@ p.error {
     clear: both;
 }
 
+.wrapper nav {
+    height: 100%;
+}
+
 .main_menu {
     width: 280px;
-    height: 100vh;
+    height: 100%;
     list-style: none;
     list-style-type: none;
     background-color: #232424;
     justify-content: center;
     align-items: center;
     padding: 1%;
+    overflow: auto;
 }
 
 .logged {
@@ -121,12 +127,11 @@ p.error {
 /* window popup */
 #label {
     display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    left: 20px;
-    margin-top: 5%;
+    justify-self: center;
+    align-self: center;
+    margin-top: 1%;
     margin-bottom: 5%;
+    margin-left: 10px;
 }
 
 .popup {
@@ -169,32 +174,30 @@ p.error {
 
 label {
     text-align: right;
-    margin-right: 20px;
+    margin-right: 1%;
 }
 
 .form_box {
-    text-align: right;
-    margin-right: 100px;
+    text-align: center;
 }
 
 .box {
-    position: relative;
-    left: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .typeText {
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
-    margin-left: 15px;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .buttons {
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    position: relative;
-    right: 20px;
-    margin: 20px;
 }
 
 /* Login popup */
