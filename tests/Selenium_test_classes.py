@@ -15,6 +15,7 @@ class Registration:
         self.__secondpassword = None
         self.__submit = None
         self.__close = None
+        self.__error = None
 
     def register(self, username, email, firstpassword, secondpassword):
         try:
@@ -58,6 +59,7 @@ class Registration:
 
                     if self.__close.is_displayed():
                         self.__close.click()
+                            
                         print("Couldnt register! Possibly your account already exist!")
                     else:
                         print("Successfully registered!")
@@ -67,6 +69,59 @@ class Registration:
                 print("Couldnt register!")
         except:
             raise Exception('Couldnt register!')
+        
+    def validation(self, username, email, firstpassword, secondpassword):
+        try:
+            # Show registration window
+            self.__registrationButton = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'registrationButton')))
+            self.__registrationButton.click()
+
+            # Get text boxes from registration
+            self.__username = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'username')))
+
+            self.__email = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'email')))
+
+            self.__firstpassword = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'pass1')))
+
+            self.__secondpassword = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'pass2')))
+
+            self.__submit = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, 'sendReg')))
+
+            # Register
+            self.__username.send_keys(username)
+            self.__email.send_keys(email)
+            self.__firstpassword.send_keys(firstpassword)
+            self.__secondpassword.send_keys(secondpassword)
+            self.__submit.click()
+
+            try:
+                alert = WebDriverWait(self.__driver, 10).until(EC.alert_is_present())
+                alert.accept()
+
+                try:
+                    try:
+                        self.__close = self.__driver.find_element(By.CLASS_NAME, 'registrationClose')
+                    except:
+                        self.__close = None
+
+                    if self.__close.is_displayed():
+                        self.__close.click()
+                            
+                        print("Validation of registration finished successfully!")
+                    else:
+                        print("Validation of registration doesn't work!")
+                except:
+                    print("Validation of registration doesn't work!")
+            except:
+                print("Validation of registration doesn't work!")
+        except:
+            raise Exception("Validation of registration doesn't work!")
 
 class Login:
     def __init__(self, driver):
@@ -120,8 +175,53 @@ class Login:
                 print("Couldnt log in!")
         except:
             raise Exception('Couldnt log in!')
+        
+    def validation(self, email, password):
+        try:
+            # Show login window
+            self.__loginButton = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'loginButton')))
+            self.__loginButton.click()
+            
+            # Get text boxes from login window
+            self.__email = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'emailLogin')))
+
+            self.__password = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'passLogin')))
+
+            self.__submit = WebDriverWait(self.__driver, 10).until(
+            EC.element_to_be_clickable((By.CLASS_NAME, 'sendLog')))
+
+            # Log in
+            self.__email.send_keys(email)
+            self.__password.send_keys(password)
+            self.__submit.click()
+
+            try:
+                alert = WebDriverWait(self.__driver, 10).until(EC.alert_is_present())
+                alert.accept()
+
+                try:
+                    try:
+                        self.__close = self.__driver.find_element(By.CLASS_NAME, 'loginClose')
+                    except:
+                        self.__close = None
+
+                    if self.__close.is_displayed():
+                        self.__close.click()
+                        print("Validation of login finished successfully")
+                    else:
+                        print("Validation of login doesn't work!")
+                except:
+                    print("Validation of login doesn't work!")
+            except:
+                print("Validation of login doesn't work!")
+        except:
+            raise Exception("Validation of login doesn't work!")
 
 class MakeRecipe:
+
     def __init__(self, driver):
         self.__driver = driver
         self.__createRecipe = None

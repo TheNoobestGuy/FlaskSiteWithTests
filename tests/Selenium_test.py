@@ -16,7 +16,9 @@ try:
     checkList = CheckList(driver)
 
     # Tests
+    register.validation("12.80s", "@@netfaskpl", "11111111", "11111111")
     register.register("maciek", "aerobat@onet.pl", "11111111", "11111111")
+    login.validation("%R@onet.pl", "11111111")
     login.login("aerobat@onet.pl", "11111111")
     makeRecipe.makeRecipe("Tomato soup", "Tomato", "Stir tomato")
     checkList.checkList()
